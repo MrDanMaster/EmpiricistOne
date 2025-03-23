@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/EmpiricistOne/static/css/main.e6c13ad2.css",
+    "main.js": "/EmpiricistOne/static/js/main.5a5690c4.js",
+    "static/js/453.80766aa9.chunk.js": "/EmpiricistOne/static/js/453.80766aa9.chunk.js",
+    "index.html": "/EmpiricistOne/index.html",
+    "main.e6c13ad2.css.map": "/EmpiricistOne/static/css/main.e6c13ad2.css.map",
+    "main.5a5690c4.js.map": "/EmpiricistOne/static/js/main.5a5690c4.js.map",
+    "453.80766aa9.chunk.js.map": "/EmpiricistOne/static/js/453.80766aa9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.5a5690c4.js"
+  ]
+}
