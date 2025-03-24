@@ -61,12 +61,12 @@ export const DEFAULT_VARIABLES: Record<string, EconomicVariable> = {
         max: 100000,
         step: 1,
         unit: "P",
-        equation: "s = total value - (c + v)",
-        description: "Value created beyond necessary labor",
-        measurementMethod: "Difference between total value and capital advanced",
+        equation: "s = m - v",
+        description: "Value created by workers beyond their wages",
+        measurementMethod: "Total value produced minus wages",
         category: "basic",
         dimension: "P",
-        isDerived: false
+        isDerived: true
     },
     totalValue: {
         name: "Total Value (W)",
@@ -85,45 +85,45 @@ export const DEFAULT_VARIABLES: Record<string, EconomicVariable> = {
 
     // Marxian Ratios
     rateOfExploitation: {
-        name: "Rate of Exploitation (s/v)",
+        name: "Rate of Exploitation (e)",
         value: 1,
         min: 0,
-        max: 50,
+        max: 10,
         step: 0.01,
         unit: "R",
-        equation: "s/v",
+        equation: "e = s/v",
         description: "Ratio of surplus value to variable capital",
-        measurementMethod: "Ratio of surplus value to wages",
+        measurementMethod: "Surplus value divided by variable capital",
         category: "ratio",
         dimension: "R",
-        isDerived: false
+        isDerived: true
     },
     organicComposition: {
-        name: "Organic Composition (c/v)",
+        name: "Organic Composition (o)",
         value: 2,
         min: 0,
-        max: 1000,
+        max: 100,
         step: 0.01,
-        unit: "T",
-        equation: "c/v",
+        unit: "R",
+        equation: "o = c/v",
         description: "Ratio of constant to variable capital",
-        measurementMethod: "Ratio of means of production to wages",
+        measurementMethod: "Constant capital divided by variable capital",
         category: "ratio",
-        dimension: "T",
-        isDerived: false
+        dimension: "R",
+        isDerived: true
     },
     rateOfProfit: {
-        name: "Rate of Profit (s/(c+v))",
-        value: 0.33,
+        name: "Rate of Profit (r)",
+        value: 0.25,
         min: 0,
         max: 1,
         step: 0.01,
-        unit: "T^-1",
-        equation: "s/(c+v)",
+        unit: "R",
+        equation: "r = s/(c + v)",
         description: "Ratio of surplus value to total capital",
-        measurementMethod: "Ratio of profit to total capital advanced",
+        measurementMethod: "Surplus value divided by total capital",
         category: "ratio",
-        dimension: "T^-1",
+        dimension: "R",
         isDerived: true
     },
 
@@ -264,5 +264,33 @@ export const DEFAULT_VARIABLES: Record<string, EconomicVariable> = {
         dimension: 'T',
         isDerived: true,
         verificationData: undefined
+    },
+    marketPrice: {
+        name: "Market Price (p)",
+        value: 200,
+        min: 0,
+        max: 1000000,
+        step: 0.01,
+        unit: "M",
+        equation: "p = c + v + s",
+        description: "Price at which commodities are sold",
+        measurementMethod: "Observed market prices",
+        category: "bourgeois",
+        dimension: "M",
+        isDerived: true
+    },
+    laborPowerValue: {
+        name: "Labor Power Value (w)",
+        value: 50,
+        min: 0,
+        max: 100000,
+        step: 1,
+        unit: "P",
+        equation: "w = subsistence + historical/moral element",
+        description: "Value of labor power including subsistence and historical/moral element",
+        measurementMethod: "Cost of reproduction of labor power",
+        category: "subjective",
+        dimension: "P",
+        isDerived: false
     }
 }; 

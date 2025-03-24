@@ -22,5 +22,12 @@ yarn-error.log*
 
 # IDE
 .idea/
-.vscode/ 
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
 node_modules
